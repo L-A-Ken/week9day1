@@ -3,6 +3,7 @@ const express = require("express");
 const movieRouter = require("./movie/movieRoutes");
 const userRouter = require("./user/userRoutes");
 
+
 const app = express();
 const port = process.env.PORT || 5001;
 

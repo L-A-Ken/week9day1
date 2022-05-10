@@ -1,5 +1,8 @@
+// require our movie model to pass in specific data
 const Movie = require("./movieModel");
 
+// create a function to add a movie to our database
+// using Movie schema to add JSON data for each film entry
 exports.addMovie = async (req, res) => {
     try {
         const newMovie = await Movie.create(req.body);
@@ -10,6 +13,7 @@ exports.addMovie = async (req, res) => {
     }
 };
 
+// Use mongoose method to list all entries in the db
 exports.listMovies = async (req, res) => {
     try {
         const movies = await Movie.find({});
